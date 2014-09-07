@@ -1,0 +1,10 @@
+*.gem
+
+/home/pi/Documents/ruby_test/twitter_bot/20140906_indi_bot.log
+/home/pi/Documents/ruby_test/twitter_bot/20140202_indi_bot.log
+/home/pi/Documents/ruby_test/twitter_bot/credentials.rb
+/home/pi/Documents/ruby_test/twitter_bot/20140201_indi_bot.log
+/home/pi/Documents/ruby_test/twitter_bot/constants.rb
+/home/pi/Documents/ruby_test/twitter_bot/connection.rb
+/home/pi/Documents/ruby_test/twitter_bot/twitter_bot.rb.save
+

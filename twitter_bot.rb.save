@@ -1,0 +1,23 @@
+class TwitterWeather
+	require 'twitter'
+        
+require_relative '/home/pi/Documents/ruby_test/twitter_test/constants'
+
+        client = Twitter::REST::Client.new do |config|
+                config.consumer_key        = Constants::CONSUMER_KEY
+                config.consumer_secret     = Constants::CONSUMER_SECRET
+                config.access_token        = Constants::ACCESS_TOKEN
+                config.access_token_secret = Constants::ACCESS_TOKEN_SECRET
+
+        end
+	begin 
+		indi_tweets = client.search("to:indivanados", :result_type => 'recent').take(3)
+        	indi_tweets.each do |tweet|
+            		client.retweet(tweet)
+		end
+	rescue
+		
+	end
+        #puts indi_tweet.inspect
+	
+end

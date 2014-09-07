@@ -1,0 +1,5 @@
+USERNAME = 'twitbot'
+PASSWORD = 'fakebot'
+
+
+
