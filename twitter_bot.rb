@@ -1,11 +1,11 @@
 class TwitterBot
 	require 'twitter'
         require 'mysql2'
-        require_relative '/home/pi/Documents/ruby_test/twitter_bot/constants'
+        require_relative '/home/pi/Documents/ruby_test/credentials/constants'
         require 'logger'
         require 'date'
         
-        log = Logger.new(Date.today.strftime("%Y%m%d")+'_indi_bot.log',"daily")
+        log = Logger.new(Constants::LOG_FOLDER+Date.today.strftime("%Y%m%d")+'_indi_bot.log',"daily")
         log.debug(Time.now.strftime("%Y-%m-%d %H:%M:%S")+" "+" file created")
         begin
                 client = Mysql2::Client.new(:host=>'localhost',:username=>Constants::USERNAME,:password=>Constants::TWITPASS,:database=>'twitter_bot_messages')
